@@ -1,0 +1,80 @@
+<div class="container">
+    <p>
+        <mat-toolbar>
+          <span>Actividades</span>
+          <div class="example-spacer"></div>
+          <button mat-raised-button color="primary" routerLink="/dashboard/crear-reportes">Agregar</button>
+        </mat-toolbar>
+      </p>
+      <mat-form-field>
+        <mat-label>Filtro</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="EJ. DADA" #input>
+      </mat-form-field>
+      
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+        <!-- Position Column -->
+        <ng-container matColumnDef="cod_actividad">
+          <th mat-header-cell *matHeaderCellDef>No.</th>
+          <td mat-cell *matCellDef="let element">{{element.cod_actividad}}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="tipo_actividad">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element">{{element.tipo_actividad}}</td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="fecha_inicial">
+          <th mat-header-cell *matHeaderCellDef>Fecha Inicial</th>
+          <td mat-cell *matCellDef="let element">{{element.fecha_inicial}}</td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="fecha_final">
+          <th mat-header-cell *matHeaderCellDef>Fecha final</th>
+          <td mat-cell *matCellDef="let element">{{element.fecha_final}}</td>
+        </ng-container>
+      
+         <!-- Symbol Column -->
+         <ng-container matColumnDef="horas_dedicadas">
+          <th mat-header-cell *matHeaderCellDef>Horas realizadas</th>
+          <td mat-cell *matCellDef="let element">{{element.horas_dedicadas}}</td>
+        </ng-container>
+         <!-- Symbol Column -->
+         <ng-container matColumnDef="horas_total">
+          <th mat-header-cell *matHeaderCellDef>Horas totales</th>
+          <td mat-cell *matCellDef="let element">{{element.horas_total}}</td>
+        </ng-container>
+         <!-- Symbol Column -->
+         <ng-container matColumnDef="calculo_horas">
+          <th mat-header-cell *matHeaderCellDef>estimado horas</th>
+          <td mat-cell *matCellDef="let element">{{element.calculo_horas}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="descripcion">
+          <th mat-header-cell *matHeaderCellDef>descripcion tarea</th>
+          <td mat-cell *matCellDef="let element">{{element.descripcion}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="acciones">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let element; let i = index" style="text-align: right;">
+            <a class="pointer" style ="color:aqua"  matTooltip="Buscar Usuario">
+              <mat-icon>search</mat-icon>
+            </a>
+            <a class="pointer" style ="color:burlywood"matTooltip="Editar Usuario">
+              <mat-icon>edit</mat-icon>
+            </a>
+            <a class="pointer" (click)="eliminarActividad(i)" matTooltip="Eliminar Usuario" style="color: darkred;">
+              <mat-icon>delete</mat-icon>
+            </a>
+          </td>
+          
+        </ng-container>
+        
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+</div>

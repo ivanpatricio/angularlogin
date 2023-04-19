@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "login-54115": {
+      "hosting": {
+        "angularlogin": [
+          "login-54115"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "login-54115"
+  }
+}

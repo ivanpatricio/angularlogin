@@ -1,0 +1,66 @@
+<div class="container">
+    <mat-toolbar>
+        <span>Agregar Actividad</span>
+    </mat-toolbar>
+    <mat-card style="margin-top: 10px;">
+    <form [formGroup]="form" (ngSubmit)="agregarActividad()">
+        <mat-grid-list cols="4" rowHeight="70px">
+            <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                <mat-form-field class="ancho">
+                    <mat-label>Codigo</mat-label>
+                    <input matInput formControlName="cod_actividad">
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                <mat-form-field class="ancho">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput formControlName="tipo_actividad">
+                  </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1" >
+            <mat-form-field class="ancho">
+                <mat-label>Fecha inicial</mat-label>
+                <input matInput formControlName="fecha_inicial">
+              </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-form-field class="ancho">
+                <mat-label>Fecha final</mat-label>
+                <input matInput formControlName="fecha_final">
+              </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-form-field class="ancho">
+                <mat-label>Horas dedicadas</mat-label>
+                <input matInput formControlName="horas_dedicadas">
+              </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-form-field class="ancho">
+                <mat-label>estimado horas</mat-label>
+                <input matInput formControlName="calculo_horas">
+              </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-form-field class="ancho">
+                <mat-label>total horas</mat-label>
+                <input matInput formControlName="horas_total">
+              </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-form-field class="ancho">
+                <mat-label>Descripcion</mat-label>
+                <input matInput formControlName="descripcion">
+              </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+           <button mat-raised-button style="margin-right: 20px;"> Volver</button>
+           <button  type="submit" mat-raised-button color="primary"> Aceptar</button>
+        </mat-grid-tile>
+        
+        </mat-grid-list>
+        
+            </form>
+            
+            </mat-card>
+</div>

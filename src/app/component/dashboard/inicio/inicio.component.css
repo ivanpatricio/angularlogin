@@ -1,0 +1,116 @@
+.c.header{
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+    column-gap:10px;
+    margin: 15px 25px;
+}
+.c.header button{
+    border: none;
+    background: none;
+    outline: inherit;
+    cursor: pointer;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 20px;
+    height: 30px;
+    font-size: 18px;
+}
+.c.header button:hover{
+    background-color: rgb(133, 99, 255);
+    transition-duration: 0.5s;
+}
+
+.c-main{
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #1f1f1f;
+}
+.c-main::-webkit-scrollbar{
+    width: 6px;
+    background-color: rgb(63, 63, 63);
+    border-radius: 5px;
+}
+.c-main::-webkit-scrollbar-thumb{
+    background-color: #5731de;
+    border-radius: 5px;
+}
+.c-main p{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+}
+.c-main .list-group{
+    margin: 0;
+    padding: 7px 10px;
+    color: white;
+    border: 1px solid rgb(42, 42, 42);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.c-main .list-group :hover{
+    border-color: rgb(131,97,255);
+    transition: 0.5s;
+}
+
+.list-group-item{
+position: relative
+}
+.list-group-item button{
+    border: none;
+    background: none;
+    outline: inherit;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    color: rgb(255,130,130);
+    border-radius: 50%;
+    font-size: 15px;
+}
+.list-group-item input[type=checkbox]{
+    display: none;
+}
+.list-group-item input[type=checkbox]+label{
+cursor: pointer;
+padding-left:  25px;
+border: none;
+position: relative;
+}
+.list-group-item label::before{
+    content: '';
+    border: 2px solid rgb(146, 116, 255);
+    border-radius: 25px;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+    margin-right: 5px;
+    position: absolute;
+    left: 0;
+}
+.list-group-item input[type=checkbox]:checked + label::before{
+    background-color: rgb(146, 116,255);
+    padding-bottom: 0;
+}
+.c-footer{
+    border-radius: 20px;
+    display: grid;
+}
+
+.c-footer input{
+    border:0;
+    outline: none;
+    background: none;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 16px;
+    margin: 5px 10px;
+    border: 2px solid #5731de;
+    padding-left: 15px;
+    color: white;
+}
+.valid-input input {
+    border-bottom: rgb(255, 119,119);
+}
